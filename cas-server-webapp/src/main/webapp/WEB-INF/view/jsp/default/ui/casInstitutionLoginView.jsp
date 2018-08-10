@@ -72,7 +72,7 @@
     <c:set var="serviceParam" value="&service=${osfLoginContext.isServiceUrl() ? osfLoginContext.getServiceUrl() : ''}"/>
     <section class="row">
         <a id="alt-login-osf" class="btn-alt-login" href="${osfLoginUrl}${serviceParam}">
-            <img class="osf-alt-logo" src="../images/providedh-alt-icon.svg">
+            <img class="osf-alt-logo" src="../images/providedh-alt-logo.png">
             <span class="label-login"><spring:message code="screen.institution.login.osf"/></span>
         </a>
     </section>

@@ -77,7 +77,7 @@
         <section class="row">
             <spring:eval var="osfLoginUrl" expression="@casProperties.getProperty('cas.osf.login.url')"/>
             <a id="alt-login-cancel" class="btn-alt-login" href="${osfLoginUrl}${serviceParam}">
-                <img class="osf-alt-logo" src="../images/providedh-alt-icon.svg">
+                <img class="osf-alt-logo" src="../images/providedh-alt-logo.png">
                 <span class="label-login"><spring:message code="screen.2fa.button.cancel"/></span>
             </a>
         </section>
