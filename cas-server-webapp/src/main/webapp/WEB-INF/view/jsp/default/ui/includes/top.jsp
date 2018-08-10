@@ -62,18 +62,6 @@
                     <a id="logo" class="center" href="${osfUrl}" title="<spring:message code="logo.title" />">PROVIDEDH | Sign In</a>
                 </div>
                 <br>
-                <div class="center">
-                    <span id="title">
-                        <c:choose>
-                            <c:when test="${osfLoginContext.isInstitutionLogin()}">
-                                <span>PROVIDEDH Institutions</span>
-                            </c:when>
-                            <c:otherwise>
-                                <span>PROVIDEDH</span>
-                            </c:otherwise>
-                        </c:choose>
-                    </span>
-                </div>
                 <div class="responsive">
                     <div id="description">
                         <br><br>
