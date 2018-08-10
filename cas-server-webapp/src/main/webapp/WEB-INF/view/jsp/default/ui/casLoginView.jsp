@@ -57,6 +57,38 @@
 <div class="box" id="login">
     <form:form method="post" id="fm1" commandName="${commandName}" htmlEscape="true">
 
+        <%-- ORCiD Login --%>
+        <c:if test="${not empty registeredService}">
+            <%-- ORCiD login is enabled for the following services: OSF, OSF Preprints and Registries, Branded Preprints
+            with OSF or branded domains, Prereg and ERPC.  ORCiD login is disabled for CAS itself and for OAuth. --%>
+            <c:if test="${not empty registeredService.id && (
+                registeredService.id == 203948234207230 || registeredService.id == 203948234207231 ||
+                registeredService.id == 203948234207232 || registeredService.id == 203948234207340 ||
+                (registeredService.id >= 203948234207240 && registeredService.id <= 203948234207264)
+            )}">
+                <section class="row">
+                    <a id="alt-login-orcid" class="btn-alt-login" href="${OrcidClientUrl}">
+                        <img class="orcid-logo" src="../images/orcid-logo.png">
+                        <span class="label-login"><spring:message code="screen.welcome.button.login.orcid"/></span>
+                    </a>
+                </section>
+            </c:if>
+        </c:if>
+
+        <%-- Institution Login --%>
+        <spring:eval var="institutionLoginUrl" expression="@casProperties.getProperty('cas.institution.login.url')"/>
+        <c:set var="serviceParam" value="&service=${osfLoginContext.isServiceUrl() ? osfLoginContext.getServiceUrl() : ''}"/>
+        <section class="row">
+            <a id="alt-login-inst" class="btn-alt-login" href="${institutionLoginUrl}${serviceParam}">
+                <img class="osf-alt-logo" src="../images/providedh-logo.svg">
+                <span class="label-login"><spring:message code="screen.welcome.button.login.institution"/></span>
+            </a>
+        </section>
+
+        <section class="row">
+            <hr class="hr-text" data-content="OR" />
+        </section>
+
         <%-- OSF Username and Password Login --%>
         <section class="row">
             <label for="username"><spring:message code="screen.welcome.label.netid"/></label>

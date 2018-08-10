@@ -40,7 +40,7 @@
     <head>
         <meta charset="UTF-8" />
 
-        <title>OSF | Sign In </title>
+        <title>PROVIDEDH | Sign In </title>
 
         <spring:theme code="standard.custom.css.file" var="customCssFile" />
         <link rel="stylesheet" href="<c:url value="${customCssFile}" />" />
@@ -59,17 +59,17 @@
             <header>
                 <div class="center">
                     <spring:eval var="osfUrl" expression="@casProperties.getProperty('osf.url')" />
-                    <a id="logo" class="center" href="${osfUrl}" title="<spring:message code="logo.title" />">OSF | Sign In</a>
+                    <a id="logo" class="center" href="${osfUrl}" title="<spring:message code="logo.title" />">PROVIDEDH | Sign In</a>
                 </div>
                 <br>
                 <div class="center">
                     <span id="title">
                         <c:choose>
                             <c:when test="${osfLoginContext.isInstitutionLogin()}">
-                                <span>OSF Institutions</span>
+                                <span>PROVIDEDH Institutions</span>
                             </c:when>
                             <c:otherwise>
-                                <span>OSF</span>
+                                <span>PROVIDEDH</span>
                             </c:otherwise>
                         </c:choose>
                     </span>

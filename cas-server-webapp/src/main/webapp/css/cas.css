@@ -37,14 +37,14 @@ h2 {
 }
 
 #logo {
-  display: block;
-  width: 110px;
-  height: 110px;
-  margin: 0 auto;
-  background: url(../images/osf-logo.png) no-repeat;
-  background-size: 100%;
-  text-indent: -999em;
-  border-right: 1px solid rgba(255,255,255,0.25);
+    display: block;
+    width: 210px;
+    height: 145px;
+    margin: 0 auto;
+    background: url(../images/providedh-logo.svg) no-repeat;
+    background-size: 100%;
+    text-indent: -999em;
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 #title {
