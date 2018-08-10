@@ -76,6 +76,7 @@
         </c:if>
 
         <%-- Institution Login --%>
+        <%--
         <spring:eval var="institutionLoginUrl" expression="@casProperties.getProperty('cas.institution.login.url')"/>
         <c:set var="serviceParam" value="&service=${osfLoginContext.isServiceUrl() ? osfLoginContext.getServiceUrl() : ''}"/>
         <section class="row">
@@ -88,6 +89,7 @@
         <section class="row">
             <hr class="hr-text" data-content="OR" />
         </section>
+        --%>
 
         <%-- OSF Username and Password Login --%>
         <section class="row">
