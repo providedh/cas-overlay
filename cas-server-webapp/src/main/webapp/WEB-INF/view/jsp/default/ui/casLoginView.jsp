@@ -85,11 +85,11 @@
                 <span class="label-login"><spring:message code="screen.welcome.button.login.institution"/></span>
             </a>
         </section>
-
+        --%>
+        
         <section class="row">
             <hr class="hr-text" data-content="OR" />
         </section>
-        --%>
 
         <%-- OSF Username and Password Login --%>
         <section class="row">
