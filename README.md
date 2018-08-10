@@ -1,8 +1,6 @@
-# Center for Open Science CAS Overlay
+# PROVIDEDH CAS Overlay
 
-`Master` Build Status: [![Build Status](https://travis-ci.org/CenterForOpenScience/cas-overlay.svg?branch=master)](https://travis-ci.org/CenterForOpenScience/cas-overlay)
-
-`Develop` Build Status: [![Build Status](https://travis-ci.org/CenterForOpenScience/cas-overlay.svg?branch=develop)](https://travis-ci.org/CenterForOpenScience/cas-overlay)
+Adjusted Center for Open Science CAS Overlay to the PROVIDEDH CHIST-ERA Project.
 
 Official Docs can be found [here](https://jasig.github.io/cas/)
 
