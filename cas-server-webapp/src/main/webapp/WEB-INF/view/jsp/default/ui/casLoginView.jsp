@@ -22,6 +22,8 @@
 <%-- Default login page for OSF --%>
 
 <jsp:directive.include file="includes/top.jsp"/>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v3.3&appId=2292189607517615&autoLogAppEvents=1"></script>
 
 <spring:eval var="tgcCookieSecure" expression="@casProperties.getProperty('tgc.cookie.secure')"/>
 <c:if test="${not pageContext.request.secure && tgcCookieSecure}">
@@ -102,8 +104,7 @@
                 <span class="label-login"><spring:message code="screen.welcome.button.login.institution"/></span>
             </a>
         </section>
-        --%>        
-
+        --%>
         <%-- ORCiD Login --%>
         <c:if test="${not empty registeredService}">
             <%-- ORCiD login is enabled for the following services: OSF, OSF Preprints and Registries, Branded Preprints
@@ -117,6 +118,25 @@
                     <a id="alt-login-orcid" class="btn-alt-login" href="${OrcidClientUrl}">
                         <img class="orcid-logo" src="../images/orcid-logo.png">
                         <span class="label-login"><spring:message code="screen.welcome.button.login.orcid"/></span>
+                    </a>
+                </section>
+                <section class="row">
+                    <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="true"></div>
+                </section>
+            </c:if>
+        </c:if>
+        <c:if test="${not empty registeredService}">
+            <%-- ORCiD login is enabled for the following services: OSF, OSF Preprints and Registries, Branded Preprints
+            with OSF or branded domains, Prereg and ERPC.  ORCiD login is disabled for CAS itself and for OAuth. --%>
+            <c:if test="${not empty registeredService.id && (
+                registeredService.id == 203948234207230 || registeredService.id == 203948234207231 ||
+                registeredService.id == 203948234207232 || registeredService.id == 203948234207340 ||
+                (registeredService.id >= 203948234207240 && registeredService.id <= 203948234207264)
+            )}">
+                <section class="row">
+                    <a id="alt-login-facebook" class="btn-alt-login" href="https://www.facebook.com/v3.3/dialog/oauth?client_id=2292189607517615&redirect_uri=https://accounts-providedh-test.ehum.psnc.pl/login">
+                        <img class="orcid-logo" src="../images/fb-logo.png">
+                        <span class="label-login">Facebook login</span>
                     </a>
                 </section>
             </c:if>
