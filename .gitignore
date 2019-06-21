@@ -13,5 +13,4 @@
 **/overlays
 serialization*/*
 etc/cas-local.properties
-etc/cas.properties
 .DS_Store
